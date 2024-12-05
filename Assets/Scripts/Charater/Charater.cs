@@ -28,4 +28,19 @@ public class Charater : MonoBehaviour
     {
 
     }
+
+    public virtual void Idle()
+    {
+
+    }
+
+    public virtual void Move()
+    {
+
+    }
+
+    public virtual void Dash()
+    {
+
+    }
 }

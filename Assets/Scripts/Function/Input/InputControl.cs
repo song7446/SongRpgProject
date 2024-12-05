@@ -15,7 +15,9 @@ public class InputControl : MonoBehaviour
     public static InputControl instance = null;
 
     public Vector2 MouseInput = Vector2.zero;
-    public Vector2 MoveInput = Vector2.zero;    
+    public Vector2 MoveInput = Vector2.zero;
+
+    public bool ShiftOn = false;
 
     private void Awake()
     {
@@ -34,6 +36,15 @@ public class InputControl : MonoBehaviour
     {
         MoveInput.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         MouseInput.Set(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            ShiftOn = true;
+        }
+        else
+        {
+            ShiftOn = false;
+        }
     }
 
 }
